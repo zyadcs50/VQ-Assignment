@@ -1,0 +1,17 @@
+{
+    "original_height": 415,
+    "original_width": 739,
+    "padded_height": 416,
+    "padded_width": 744,
+    "block_height": 8,
+    "block_width": 8,
+    "pad_bottom": 1,
+    "pad_right": 5,
+    "codebook_size": 64,
+    "vector_dimension": 64,
+    "num_vectors": 4836,
+    "bits_per_index": 6,
+    "binary_padding_bits": 0,
+    "image_mode": "L",
+    "max_iterations": 20
+}
