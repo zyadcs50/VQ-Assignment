@@ -2,8 +2,7 @@
 from image_processing import prepare_image
 from VQ_compression import compress
 from VQ_decompression import decompress
-
-
+import os
 def main():
     print("=== Vector Quantization Image Compression ===")
     print("1. Compress Image")
@@ -56,8 +55,18 @@ def main():
         print("Codebook saved as: codebook.npy")
         print("Compressed data saved as: compressed.bin")
         print("Metadata saved as: metadata.json")
+        
+        original_size = os.path.getsize(image_path)
 
+        compressed_size = (
+            os.path.getsize("compressed.bin")
+            + os.path.getsize("codebook.npy")
+            + os.path.getsize("metadata.json")
+        )
+
+        compression_ratio = original_size / compressed_size
         print("\nCompression completed successfully!")
+        print(f"Compression Ratio: {compression_ratio:.2f}")
 
     elif choice == "2":
 
